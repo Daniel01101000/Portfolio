@@ -1,5 +1,6 @@
 import './Cards.css'
 import TechStack from "./TechStack/TechStack.jsx";
+import { useLanguage } from '../../hooks/useLanguage.js';
 
 import apiMoviesImg from "../../assets/Imgs_Projects/ApiMovies.png";
 import ShopSmart from "../../assets/Imgs_Projects/ShopSmart.png";
@@ -9,6 +10,8 @@ import Quizzes from "../../assets/Imgs_Projects/Quizzes.png";
 import Lootly from "../../assets/Imgs_Projects/Lootly.png";
 
 function Cards() {
+  const { t } = useLanguage();
+
   return (
     <div className="cards-container">
 
@@ -18,7 +21,7 @@ function Cards() {
         </a>
         <div className="card-content">
           <h3>ApiMovies</h3>
-          <p>Fullstack App (Browse Movie Data from an API)</p>
+          <p>{t("Fullstack App (Browse Movie Data from an API)")}</p>
           <TechStack technologies={["React","JavaScript","HTML","CSS","Node","Git"]}/>
         </div>
       </div>
@@ -29,9 +32,9 @@ function Cards() {
         </a>
         <div className="card-content">
           <h3>ShopSmart</h3>
-          <p>Fullstack App (E-commerce Platform)</p>
+          <p>{t("Fullstack App (E-commerce Platform)")}</p>
           <p className="demo-link">
-            <strong>Live Demo Video:</strong>{" "}
+            <strong>{t("Live Demo Video:")}</strong>{" "}
             
                 <a 
                   href="https://www.loom.com/share/58bd319f7e054e1997c19a6f87c0bc6c" 
@@ -42,7 +45,7 @@ function Cards() {
                 </a>
 
                 <span className="demo-note">
-                    {" "} (Without waiting)
+                    {" "} {t("(Without waiting)")}
                 </span>
             </p>
           <TechStack technologies={["React","JavaScript","HTML","CSS","Node","SQL","Git"]}/>
@@ -55,7 +58,7 @@ function Cards() {
         </a>
         <div className="card-content">
           <h3>ApiPokemon</h3>
-          <p>Fullstack App (View Pokémon from the First Generation)</p>
+          <p>{t("Fullstack App (View Pokémon from the First Generation)")}</p>
           <TechStack technologies={["React","JavaScript","HTML","CSS","Git"]}/>
         </div>
       </div>
@@ -66,7 +69,7 @@ function Cards() {
         </a>
         <div className="card-content">
           <h3>ApiRick</h3>
-          <p>Fullstack App (Browse Rick and Morty Characters)</p>
+          <p>{t("Fullstack App (Browse Rick and Morty Characters)")}</p>
           <TechStack technologies={["React","JavaScript","HTML","CSS","Git"]}/>
         </div>
       </div>
@@ -77,7 +80,7 @@ function Cards() {
         </a>
         <div className="card-content">
           <h3>Quizzes</h3>
-          <p>Fullstack App (Create Custom Quizzes and Flashcards)</p>
+          <p>{t("Fullstack App (Create Custom Quizzes and Flashcards)")}</p>
           <TechStack technologies={["React","Redux","JavaScript","HTML","CSS","Git"]}/>
         </div>
       </div>
@@ -88,7 +91,7 @@ function Cards() {
         </a>
         <div className="card-content">
           <h3>Lootly</h3>
-          <p>Fullstack App (Show offers in technology)</p>
+          <p>{t("Fullstack App (Show offers in technology)")}</p>
           <TechStack technologies={["React","Redux","JavaScript","HTML","CSS","Git"]}/>
         </div>
       </div>

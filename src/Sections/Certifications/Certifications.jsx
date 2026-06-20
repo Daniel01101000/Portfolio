@@ -1,4 +1,5 @@
 import "./Certifications.css";
+import { useLanguage } from '../../hooks/useLanguage.js';
 
 import certificateImg1 from "../../assets/Certifications/Imgs/FullStack.png";
 import certificateImg2 from "../../assets/Certifications/Imgs/Javascript.png";
@@ -11,6 +12,8 @@ import certificatePDF3 from "../../assets/Certifications/PDFS/JavascriptAsynchro
 import certificatePDF4 from "../../assets/Certifications/PDFS/javascriptFundamentals.pdf";
 
 function Certification() {
+  const { t } = useLanguage();
+
   const certificates = [
     {
       img: certificateImg1,
@@ -36,7 +39,7 @@ function Certification() {
 
   return (
     <section id="certifications" className="certification">
-      <h2 className="certification-title">Certifications</h2>
+      <h2 className="certification-title">{t("Certifications")}</h2>
 
       {certificates.map((cert, index) => (
         <div key={index} className="certificate-wrapper">
@@ -55,7 +58,7 @@ function Certification() {
               rel="noopener noreferrer"
               className="certificate-button"
             >
-              View Certificate (PDF)
+              {t("View Certificate (PDF)")}
             </a>
           </div>
         </div>

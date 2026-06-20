@@ -18,6 +18,11 @@
   font-weight: bold;
 }
 
+.header-brand {
+  display: flex;
+  align-items: center;
+}
+
 /* NAV DESKTOP */
 .nav {
   display: flex;
